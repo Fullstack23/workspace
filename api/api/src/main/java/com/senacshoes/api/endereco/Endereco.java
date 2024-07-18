@@ -1,12 +1,22 @@
 package com.senacshoes.api.endereco;
 
-import com.senacshoes.api.medico.Especialidades;
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Embeddable
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Endereco {
-    private String id;
-    private String nome;
-    private String email;
-    private String crm;
-    private Especialidades especialidades;
-    private Endereco endereco;
+    
+    private String logradouro;
+    private String bairro;
+    private String cep;
+    private String numero;
+    private String complemento;
+    private String cidade;
+    private String uf;
+
 }
